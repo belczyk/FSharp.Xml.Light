@@ -97,7 +97,7 @@ let newline lexbuf =
 
 let error lexbuf e =
     last_pos := lexeme_start lexbuf;
-    raise (Error (e, last_pos))
+    raise (Error (e, !last_pos))
 
 let dtd_error lexbuf e =
     last_pos := lexeme_start lexbuf;

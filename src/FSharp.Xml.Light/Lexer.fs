@@ -12,7 +12,7 @@ let lexeme_start<'a> (lexbuf : LexBuffer<'a>) = lexbuf.StartPos.AbsoluteOffset
 let lexeme_end<'a> (lexbuf : LexBuffer<'a>) = lexbuf.EndPos.AbsoluteOffset
 let lexeme_char<'a> (lexbuf  : LexBuffer<'a>) n = lexbuf.LexemeChar n
 
-type LexingError =
+type error =
     | EUnterminatedComment
     | EUnterminatedString
     | EIdentExpected
@@ -29,7 +29,7 @@ type dtd_error =
     | EInvalidDTDElement
     | EInvalidDTDAttribute
 
-exception Error of LexingError * int
+exception Error of error * int
 exception DTDError of dtd_error
 
 type pos = int * int * int * int
@@ -98,7 +98,7 @@ let newline lexbuf =
 
 let error lexbuf e =
     last_pos := lexeme_start lexbuf;
-    raise (Error (e, ErrorDetails.fromLexBuffer lexbuf))
+    raise (Error (e, !last_pos))
 
 let dtd_error lexbuf e =
     last_pos := lexeme_start lexbuf;
@@ -790,7 +790,7 @@ and comment  lexbuf =
           )
   | 2 -> ( 
 # 207 "Lexer.fsl"
-                         raise (Error (EUnterminatedComment , ErrorDetails.fromLexBuffer lexbuf)) 
+                         raise (Error (EUnterminatedComment ,  lexeme_start lexbuf)) 
 # 794 "Lexer.fs"
           )
   | 3 -> ( 
@@ -915,7 +915,7 @@ and entity  lexbuf =
           )
   | 2 -> ( 
 # 277 "Lexer.fsl"
-                         raise (Error (EUnterminatedEntity, ErrorDetails.fromLexBuffer lexbuf)) 
+                         raise (Error (EUnterminatedEntity, lexeme_start lexbuf)) 
 # 919 "Lexer.fs"
           )
   | _ -> failwith "entity"
@@ -1031,7 +1031,7 @@ and dq_string  lexbuf =
           )
   | 2 -> ( 
 # 336 "Lexer.fsl"
-                         raise (Error (EUnterminatedString, ErrorDetails.fromLexBuffer lexbuf)) 
+                         raise (Error (EUnterminatedString, lexeme_start lexbuf)) 
 # 1035 "Lexer.fs"
           )
   | 3 -> ( 
@@ -1061,7 +1061,7 @@ and q_string  lexbuf =
           )
   | 2 -> ( 
 # 352 "Lexer.fsl"
-                         raise (Error (EUnterminatedString, ErrorDetails.fromLexBuffer lexbuf)) 
+                         raise (Error (EUnterminatedString, lexeme_start lexbuf)) 
 # 1065 "Lexer.fs"
           )
   | 3 -> ( 

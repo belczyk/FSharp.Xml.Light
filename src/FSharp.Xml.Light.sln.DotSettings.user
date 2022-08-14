@@ -1,0 +1,16 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=07b4bfa0_002D8122_002D42a6_002Dbf69_002D65969188fee8/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Generates snippet  #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId xml:space="preserve"&gt;xUnit::4E849CEF-A33E-4889-B82A-BA1B256ED2D7::net6.0::FSharp.Xml.Light.Tests.SnippetTests.Generates snippet &lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=129e68e9_002De31f_002D41d5_002D90b1_002D4b57cfb5fc08/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Generates snippet " xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId xml:space="preserve"&gt;xUnit::4E849CEF-A33E-4889-B82A-BA1B256ED2D7::net6.0::FSharp.Xml.Light.Tests.SnippetTests.Generates snippet &lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d0a93783_002Dc43d_002D42c0_002Db250_002Dce3a93d13993/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Generates snippet  #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId xml:space="preserve"&gt;xUnit::4E849CEF-A33E-4889-B82A-BA1B256ED2D7::net6.0::FSharp.Xml.Light.Tests.SnippetTests.Generates snippet &lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
