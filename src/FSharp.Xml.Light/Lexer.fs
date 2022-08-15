@@ -5,7 +5,7 @@ module FSharp.Xml.Light.Lexer
 open FSharp.Text.Lexing
 open Dtd
 open System.Collections.Generic
-open Parser 
+open FSharp.Xml.Light.DtdParser
 
 let lexeme  (lexbuf : LexBuffer<char>) = new System.String(lexbuf.Lexeme)
 let lexeme_start<'a> (lexbuf : LexBuffer<'a>) = lexbuf.StartPos.AbsoluteOffset

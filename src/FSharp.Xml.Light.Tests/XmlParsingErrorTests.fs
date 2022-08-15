@@ -3,7 +3,7 @@ namespace FSharp.Xml.Light.Tests
 open System
 open Xunit
 open Xunit.Abstractions
-open FSharp.Xml.Light.XmlParser
+open FSharp.Xml.Light.Parser
 type SnippetTests( output:  ITestOutputHelper  ) =
     
     
